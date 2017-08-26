@@ -18,8 +18,8 @@ class FoodsTableSeeder extends Seeder
         foreach (range(1, 20) as $item) {
             $food = new Food();
 
-            $food->user_id = $faker->numberBetween(1, 10);
-            $food->name = $faker->word;
+            $food->user_id = $faker->numberBetween(1, 11);
+            $food->name = $faker->sentence(1, true);
             $food->description = $faker->paragraph(7, true);
             $food->price = '$'.$faker->randomFloat(2, 1, 25);
             $food->menu = $faker->randomElement(['Brunch', 'Lunch', 'Dinner', 'New', 'Specials']);

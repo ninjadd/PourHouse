@@ -15,10 +15,10 @@ class BoozesTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach (range(1, 20) as $item) {
+        foreach (range(1, 21) as $item) {
             $booze = new Booze();
-            $booze->user_id = $faker->numberBetween(1, 10);
-            $booze->name = $faker->word;
+            $booze->user_id = $faker->numberBetween(1, 11);
+            $booze->name = $faker->sentence(1, true);
             $booze->description = $faker->paragraph(3, true);
             $booze->price = '$'.$faker->randomFloat(2, 1, 25);
             $booze->save();

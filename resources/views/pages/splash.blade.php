@@ -110,6 +110,7 @@
                         <li><a class="filter" data-filter=".lunch">Lunch</a></li>
                         <li><a class="filter" data-filter=".dinner">Dinner</a></li>
                         <li><a class="filter" data-filter=".brunch">Brunch</a></li>
+                        <li><a class="filter" data-filter=".drinks">Drinks</a></li>
                         <li><a class="filter" data-filter=".new">New</a></li>
                     </ul>
                 </div>
@@ -122,6 +123,16 @@
                                 <span class="menu-price">{{ $food->price }}</span>
                             </span>
                             <span class="menu-subtitle">{{ str_limit($food->description, 150, '...') }}</span>
+                        </div>
+                    @endforeach
+                    @foreach($boozes as $booze)
+                        <div class="mix drinks menu-restaurant" data-myorder="2">
+                        <span class="clearfix">
+                            <span class="menu-title">{{ $booze->name }}</span>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">{{ $booze->price }}</span>
+                        </span>
+                            <span class="menu-subtitle">{{ str_limit($booze->description, 150, '...') }}</span>
                         </div>
                     @endforeach
                 </div>

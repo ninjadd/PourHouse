@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Booze;
 use App\Food;
 use Illuminate\Http\Request;
 use App\Event;
@@ -12,8 +13,9 @@ class PageController extends Controller
     {
         $events = Event::orderBy('date', 'desc')->paginate(4);
         $foods = Food::orderBy('menu')->get();
+        $boozes = Booze::orderBy('name')->get();
 
-        return view('pages.splash', compact('events', 'foods', 'food_menus'));
+        return view('pages.splash', compact('events', 'foods', 'food_menus', 'boozes'));
     }
 
     public function liquor()
