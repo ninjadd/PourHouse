@@ -118,7 +118,7 @@
                     @foreach($foods as $food)
                         <div class="mix {{ strtolower($food->menu) }} menu-restaurant" data-myorder="2">
                             <span class="clearfix">
-                                <span class="menu-title">{{ $food->name }}</span>
+                                <a href="#" class="menu-title">{{ $food->name }}</a>
                                 <span style="left: 166px; right: 44px;" class="menu-line"></span>
                                 <span class="menu-price">{{ $food->price }}</span>
                             </span>
@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-8">
-                    <form action="" method="post" role="form" class="contactForm">
+                    <form role="form" class="contactForm">
                         <div id="sendmessage">Your booking request has been sent. Thank you!</div>
                         <div id="errormessage"></div>
                         <div class="col-md-6 col-sm-6 contact-form pad-form">

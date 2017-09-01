@@ -32,7 +32,7 @@
                     <a href="#about">About</a>
                     <a href="#event">Event</a>
                     <a href="#menu-list">Menu</a>
-                    <a href="#contact">Book an Event</a>
+                    <a href="#contact">Book Event</a>
                 </div>
                 <!-- Use any element to open the sidenav -->
                 <span onclick="openNav()" class="pull-right menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -43,7 +43,7 @@
                 <div class="inner text-center">
                     <h1 class="logo-name">PourHouse</h1>
                     <h2>Liquor Room Dinning - Dancing</h2>
-                    <p>a satisfying establishment for the discerning patron</p>
+                    <p>A Satisfying Establishment for the Discerning Patron</p>
                 </div>
             </div>
         </div>
