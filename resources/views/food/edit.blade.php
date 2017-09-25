@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <label for="labelUrl" class="col-lg-2 control-label">Image</label>
                                     <div class="col-lg-10">
-                                        <input name="image" value="{{ $food->image }}" class="form-control" id="labelUrl" type="url" required="required" placeholder="URL to image from anywhere">
+                                        <input name="image" value="{{ $food->image }}" class="form-control" id="labelUrl" type="url" placeholder="URL to image from anywhere">
                                     </div>
                                 </div>
 

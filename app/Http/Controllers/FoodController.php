@@ -45,7 +45,6 @@ class FoodController extends Controller
         $this->validate($request, [
             'name' => 'required|string',
             'description' => 'required|string',
-            'image' => 'required|url',
             'menu' => 'required|string'
         ]);
 
@@ -97,7 +96,6 @@ class FoodController extends Controller
         $this->validate($request, [
             'name' => 'required|string',
             'description' => 'required|string',
-            'image' => 'required|url',
             'menu' => 'required|string'
         ]);
 

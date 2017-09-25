@@ -15,7 +15,7 @@ class FoodsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach (range(1, 20) as $item) {
+        foreach (range(1, 50) as $item) {
             $food = new Food();
 
             $food->user_id = $faker->numberBetween(1, 11);
@@ -23,7 +23,7 @@ class FoodsTableSeeder extends Seeder
             $food->description = $faker->paragraph(7, true);
             $food->price = '$'.$faker->randomFloat(2, 1, 25);
             $food->menu = $faker->randomElement(['Brunch', 'Lunch', 'Dinner', 'New', 'Specials']);
-            $food->image = $faker->imageUrl(640, 480);
+            $food->image = $faker->optional()->imageUrl(640, 480);
 
             $food->save();
         }
