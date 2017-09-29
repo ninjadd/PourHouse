@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBoozesTable extends Migration
+class CreateMenuItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateBoozesTable extends Migration
      */
     public function up()
     {
-        Schema::create('boozes', function (Blueprint $table) {
+        Schema::create('menu_items', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->string('name');
+            $table->integer('type_id');
+            $table->string('title');
+            $table->string('slug');
             $table->text('description');
-            $table->string('price')->nullable();
+            $table->string('price');
+            $table->text('image')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,6 +34,6 @@ class CreateBoozesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boozes');
+        Schema::dropIfExists('menu_items');
     }
 }

@@ -40,8 +40,8 @@ class User extends Authenticatable
         return $this->hasMany(Event::class);
     }
 
-    public function boozes()
+    public function menuItems()
     {
-        return$this->hasMany(Booze::class);
+        $this->hasMany(MenuItem::class);
     }
 }

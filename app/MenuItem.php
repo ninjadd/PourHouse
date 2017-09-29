@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Food extends Model
+class MenuItem extends Model
 {
     use SoftDeletes;
 
@@ -23,10 +23,10 @@ class Food extends Model
      */
     protected $fillable = [
         'user_id',
-        'name',
+        'title',
+        'slug',
         'description',
         'price',
-        'menu',
         'image'
     ];
 

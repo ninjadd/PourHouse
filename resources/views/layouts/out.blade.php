@@ -52,6 +52,12 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                 </li>
+                @if(auth()->user())
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/home">Dashboard</a>
+                    </li>
+                @endif
+
             </ul>
         </div>
     </div>

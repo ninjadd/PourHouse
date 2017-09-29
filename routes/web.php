@@ -43,29 +43,3 @@ Route::get('event/{event}/edit', 'EventController@edit');
 Route::put('event/{event}', 'EventController@update');
 
 Route::delete('event/{event}', 'EventController@destroy');
-
-//Boozes
-Route::get('booze', 'BoozeController@index');
-
-Route::get('booze/create', 'BoozeController@create');
-
-Route::post('booze', 'BoozeController@store');
-
-Route::get('booze/{booze}/edit', 'BoozeController@edit');
-
-Route::put('booze/{booze}', 'BoozeController@update');
-
-Route::delete('booze/{booze}', 'BoozeController@destroy');
-
-//Foods
-Route::get('food', 'FoodController@index');
-
-Route::get('food/create', 'FoodController@create');
-
-Route::post('food', 'FoodController@store');
-
-Route::get('food/{food}/edit', 'FoodController@edit');
-
-Route::put('food/{food}', 'FoodController@update');
-
-Route::delete('food/{food}', 'FoodController@destroy');
