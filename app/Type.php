@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class MenuItem extends Model
+class Type extends Model
 {
     use SoftDeletes;
 
@@ -22,12 +22,7 @@ class MenuItem extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id',
-        'title',
-        'slug',
-        'description',
-        'price',
-        'image'
+        'name'
     ];
 
     /**
@@ -37,13 +32,9 @@ class MenuItem extends Model
      */
     protected $hidden = [];
 
-    public function user()
+    public function menuItem()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(Type::class);
     }
 
-    public function type()
-    {
-        return $this->belongsTo(Type::class);
-    }
 }
