@@ -283,6 +283,7 @@ table {
     font-family: Montserrat,arial;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 16px;
     color: #fed039;
 }
 .menu-restaurant .menu-line {
@@ -303,7 +304,7 @@ table {
     float: left;
     color: #B1B1B1;
     font-family: Satisfy,'Open Sans',arial;
-    font-size: 1.2rem;
+    font-size: 11px;
 }
 .menu-restaurant span.clearfix {
     position: relative;
