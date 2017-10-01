@@ -43,3 +43,16 @@ Route::get('event/{event}/edit', 'EventController@edit');
 Route::put('event/{event}', 'EventController@update');
 
 Route::delete('event/{event}', 'EventController@destroy');
+
+//MenuItems
+Route::get('menu', 'MenuItemController@index');
+
+Route::get('menu/create', 'MenuItemController@create');
+
+Route::post('menu', 'MenuItemController@store');
+
+Route::get('/menu/{menuItem}/edit', 'MenuItemController@edit');
+
+Route::put('menu/{menuItem}', 'MenuItemController@update');
+
+Route::delete('menu/{menuItem}', 'MenuItemController@destroy');

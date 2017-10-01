@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\MenuItem;
+use App\Type;
 use Illuminate\Http\Request;
 
 class MenuItemController extends Controller
@@ -19,7 +20,9 @@ class MenuItemController extends Controller
      */
     public function index()
     {
-        //
+        $menuItems = MenuItem::all();
+
+        return view('menu.index', compact('menuItems'));
     }
 
     /**
@@ -29,7 +32,9 @@ class MenuItemController extends Controller
      */
     public function create()
     {
-        //
+        $types = Type::orderBy('name', 'asc')->get();
+
+        return view('menu.create', compact('types'));
     }
 
     /**
@@ -40,7 +45,24 @@ class MenuItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|string',
+            'type' => 'required|integer',
+            'description' => 'required|string'
+        ]);
+
+        $menuItem = new MenuItem();
+        $menuItem->create([
+            'user_id' => auth()->id(),
+            'type_id' => $request->type,
+            'title' => $request->title,
+            'slug' => str_slug($request->title),
+            'description' => $request->description,
+            'price' => $request->price,
+            'image' => $request->image
+        ]);
+
+        return back()->with('status', 'You created a new Menu Item good job!<br> Feel free to create a new one.');
     }
 
     /**
@@ -62,7 +84,9 @@ class MenuItemController extends Controller
      */
     public function edit(MenuItem $menuItem)
     {
-        //
+        $types = Type::orderBy('name', 'asc')->get();
+
+        return view('menu.edit', compact('menuItem', 'types'));
     }
 
     /**
@@ -74,7 +98,23 @@ class MenuItemController extends Controller
      */
     public function update(Request $request, MenuItem $menuItem)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|string',
+            'type' => 'required|integer',
+            'description' => 'required|string'
+        ]);
+
+        $menuItem->update([
+            'user_id' => auth()->id(),
+            'type_id' => $request->type,
+            'title' => $request->title,
+            'slug' => str_slug($request->title),
+            'description' => $request->description,
+            'price' => $request->price,
+            'image' => $request->image
+        ]);
+
+        return back()->with('status', 'You updated a Menu Item good job!');
     }
 
     /**
@@ -85,6 +125,8 @@ class MenuItemController extends Controller
      */
     public function destroy(MenuItem $menuItem)
     {
-        //
+        $menuItem->delete();
+
+        return back()->with('status', 'That Menu Item is gone now!');
     }
 }

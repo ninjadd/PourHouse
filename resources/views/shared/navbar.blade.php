@@ -10,7 +10,7 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/meun">View Menu Items</a></li>
+                        <li><a href="/menu">View Menu Items</a></li>
                         @if(auth()->user()->role == 'admin')
                             <li role="separator" class="divider"></li>
                             <li><a href="/user">Users Management</a></li>

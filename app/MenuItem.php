@@ -23,6 +23,7 @@ class MenuItem extends Model
      */
     protected $fillable = [
         'user_id',
+        'type_id',
         'title',
         'slug',
         'description',

@@ -12,10 +12,8 @@ class PageController extends Controller
     public function splash()
     {
         $events = Event::orderBy('date', 'desc')->paginate(12);
-        $foods = Food::orderBy('menu')->get();
-        $boozes = Booze::orderBy('name')->get();
 
-        return view('pages.splash', compact('events', 'foods', 'food_menus', 'boozes'));
+        return view('pages.splash', compact('events'));
     }
 
     public function liquor()

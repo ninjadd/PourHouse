@@ -20,7 +20,7 @@ class CreateMenuItemsTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('description');
-            $table->string('price');
+            $table->string('price')->nullable();
             $table->text('image')->nullable();
             $table->softDeletes();
             $table->timestamps();
