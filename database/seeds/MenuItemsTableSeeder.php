@@ -25,7 +25,6 @@ class MenuItemsTableSeeder extends Seeder
             $menuItem->slug = $slug;
             $menuItem->description = $faker->sentence(6, true);
             $menuItem->price = $faker->randomFloat(2,7, 100);
-            $menuItem->image = $faker->optional()->imageUrl(640, 480, true);
             $menuItem->save();
         }
     }

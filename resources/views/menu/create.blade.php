@@ -59,13 +59,6 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="labelUrl" class="col-lg-2 control-label">Image</label>
-                                    <div class="col-lg-10">
-                                        <input name="image" class="form-control" value="{{ old('image') }}" id="labelUrl" type="url" placeholder="URL to image from anywhere">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
                                     <div class="col-lg-10 col-lg-offset-2">
                                         <button type="submit" class="btn btn-success">Save Menu Item</button>
                                         <button type="reset" class="btn btn-default">Cancel</button>

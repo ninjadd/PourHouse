@@ -81,92 +81,33 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <span class="copyright">Copyright &copy; Your Website 2017</span>
+                
             </div>
             <div class="col-md-4">
                 <ul class="list-inline social-buttons">
                     <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//pourhouseoceanside.com" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fa fa-linkedin"></i>
+                        <a href="https://www.instagram.com/pourhouseoceanside" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/search?q=pourhouseoceanside" target="_blank">
+                            <i class="fa fa-twitter"></i>
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                    <li class="list-inline-item">
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Terms of Use</a>
-                    </li>
-                </ul>
+
             </div>
         </div>
     </div>
 </footer>
-
-<!-- Portfolio Modals -->
-
-<!-- Modals -->
-@foreach($events as $event)
-    <div class="portfolio-modal modal fade" id="{{ $event->slug }}" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2>{{ $event->title }}</h2>
-                                <p class="item-intro text-muted">{{ $event->artist }}</p>
-                                <img class="img-fluid d-block mx-auto" src="{{ $event->image }}" alt="">
-                                <p>{{ $event->description }}</p>
-                                <ul class="list-inline">
-                                    <li>Date: {{ $event->date->toFormattedDateString() }}</li>
-                                    <li>Time: {{ $event->start_time }} &mdash; {{ $event->end_time }}</li>
-                                    <li>Artist: {{ $event->artist }}</li>
-                                </ul>
-                                <ul class="list-inline social-buttons">
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <i class="fa fa-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i>Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endforeach
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{ asset('agency/vendor/jquery/jquery.min.js') }}"></script>

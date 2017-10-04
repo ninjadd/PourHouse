@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class MenuItemController extends Controller
 {
+    /**
+     * MenuItemController constructor.
+     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -51,6 +54,8 @@ class MenuItemController extends Controller
             'description' => 'required|string'
         ]);
 
+        $price = str_replace('$', '', $request->price);
+
         $menuItem = new MenuItem();
         $menuItem->create([
             'user_id' => auth()->id(),
@@ -58,8 +63,7 @@ class MenuItemController extends Controller
             'title' => $request->title,
             'slug' => str_slug($request->title),
             'description' => $request->description,
-            'price' => $request->price,
-            'image' => $request->image
+            'price' => $price
         ]);
 
         return back()->with('status', 'You created a new Menu Item good job!<br> Feel free to create a new one.');
@@ -104,24 +108,24 @@ class MenuItemController extends Controller
             'description' => 'required|string'
         ]);
 
+        $price = str_replace('$', '', $request->price);
+
         $menuItem->update([
             'user_id' => auth()->id(),
             'type_id' => $request->type,
             'title' => $request->title,
             'slug' => str_slug($request->title),
             'description' => $request->description,
-            'price' => $request->price,
-            'image' => $request->image
+            'price' => $price
         ]);
 
         return back()->with('status', 'You updated a Menu Item good job!');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\MenuItem  $menuItem
-     * @return \Illuminate\Http\Response
+     * @param MenuItem $menuItem
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy(MenuItem $menuItem)
     {

@@ -21,7 +21,6 @@ class CreateMenuItemsTable extends Migration
             $table->string('slug');
             $table->text('description');
             $table->decimal('price')->nullable();
-            $table->text('image')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
