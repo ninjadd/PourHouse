@@ -16,6 +16,10 @@ Route::get('/', 'PageController@splash');
 
 Route::get('liquor', 'PageController@liquor');
 
+Route::post('contact', 'PageController@sendContact');
+
+Route::post('book', 'PageController@sendBook');
+
 Auth::routes();
 
 Route::get('home', 'EventController@index')->name('home');
