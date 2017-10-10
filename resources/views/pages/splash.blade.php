@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Events</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Check out our latest shows</h3>
                 </div>
             </div>
             <div class="row">
@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">The History of Us</h3>
                 </div>
             </div>
             <div class="row">
@@ -48,11 +48,24 @@
                         <li>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                    <h4>Founded in 2014</h4>
+                                    <h4 class="subheading">A satisfying establishment for the discerning patron.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">The Pour House offers world class dining, liquor, and entertainment in the heart of South Oceanside.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Located In South Oceanside</h4>
+                                    <h4 class="subheading"></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"><i class="fa fa-location-arrow" aria-hidden="true"></i> 1903 S. Coast Highway, Oceanside, CA 92054</p>
+                                    <p class="text-muted"><i class="fa fa-phone" aria-hidden="true"></i> 760-730-5944</p>
+                                    <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> Mon - Sat / 11:00-2:00, Sun / 09:00 - 2:00</p>
                                 </div>
                             </div>
                         </li>

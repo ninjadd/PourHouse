@@ -25,10 +25,6 @@ class TypesTableSeeder extends Seeder
         ]);
 
         Type::create([
-            'name' => 'Sides / Add Ons'
-        ]);
-
-        Type::create([
             'name' => 'Local Favorites'
         ]);
 
@@ -53,11 +49,8 @@ class TypesTableSeeder extends Seeder
         ]);
 
         Type::create([
-            'name' => 'Wine & Bubbly (GL/BTL)'
+            'name' => 'Wine & Bubbly'
         ]);
 
-        Type::create([
-            'name' => 'Non-Alcoholic'
-        ]);
     }
 }

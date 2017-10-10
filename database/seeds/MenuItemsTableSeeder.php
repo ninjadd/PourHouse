@@ -15,10 +15,10 @@ class MenuItemsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach (range(1, 144) as $item) {
+        foreach (range(1, 75) as $item) {
             $menuItem = new MenuItem();
             $menuItem->user_id = $faker->numberBetween(1, 11);
-            $menuItem->type_id = $faker->numberBetween(1, 12);
+            $menuItem->type_id = $faker->numberBetween(1, 10);
             $title = $faker->words(3, true);
             $slug = str_slug($title);
             $menuItem->title = $title;
