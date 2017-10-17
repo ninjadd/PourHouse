@@ -14,7 +14,7 @@ class PageController extends Controller
 {
     public function splash()
     {
-        $events = Event::orderBy('date', 'desc')->paginate(12);
+        $events = Event::orderByRaw('ABS(DATEDIFF(events.date, NOW()))')->paginate(24);
         $menuItems = MenuItem::all();
         $types = Type::orderBy('id', 'asc')->get();
 

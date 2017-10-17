@@ -66,7 +66,7 @@ class MenuItemController extends Controller
             'price' => $price
         ]);
 
-        return back()->with('status', 'You created a new Menu Item good job!<br> Feel free to create a new one.');
+        return back()->with('status', 'You created a new Menu Item good job! Feel free to create a new one.');
     }
 
     /**

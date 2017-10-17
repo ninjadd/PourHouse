@@ -20,7 +20,7 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="{{ $event->image  }}" alt="">
+                            <img class="img-thumbnail" style="width: 350px; height: 350px;" src="{{ $event->image  }}" alt="">
                         </a>
                         <div class="portfolio-caption">
                             <h4>{{ $event->title }}</h4>
@@ -157,8 +157,8 @@
             <br><br><br>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Book With Us</h2>
-                    <h3 class="section-subheading text-muted">If you want to book a show or event here</h3>
+                    <h2 class="section-heading">Music Bookings</h2>
+                    <h3 class="section-subheading text-muted">If you are interested in your band playing here</h3>
                 </div>
             </div>
             <div class="row">
