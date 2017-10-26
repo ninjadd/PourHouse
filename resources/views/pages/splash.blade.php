@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Events Grid -->
-    <section class="bg-light" id="portfolio">
+    <section class="bg-dark" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -34,7 +34,7 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
