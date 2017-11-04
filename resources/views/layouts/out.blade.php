@@ -44,6 +44,9 @@
                     <a class="nav-link js-scroll-trigger" href="#portfolio">Events</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#cal">Calendar</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#about">About</a>
                 </li>
                 <li class="nav-item">
@@ -126,5 +129,6 @@
 <script src="{{ asset('delicious/js/jquery.mixitup.min.js') }}"></script>
 <script src="{{ asset('delicious/js/custom.js') }}"></script>
 
+@yield('foot')
 </body>
 </html>

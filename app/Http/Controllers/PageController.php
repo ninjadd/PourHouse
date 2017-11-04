@@ -18,7 +18,9 @@ class PageController extends Controller
         $menuItems = MenuItem::all();
         $types = Type::orderBy('id', 'asc')->get();
 
-        return view('pages.splash', compact('events', 'menuItems', 'types'));
+        $calendarEvents = Event::orderBy('date', 'desc')->get();
+
+        return view('pages.splash', compact('events', 'menuItems', 'types', 'calendarEvents'));
     }
 
     public function sendContact(Request $request)

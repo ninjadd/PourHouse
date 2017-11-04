@@ -1,5 +1,46 @@
 @extends('layouts.out')
 
+@section('foot')
+    <link href="{{ asset('fullcalendar/fullcalendar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('fullcalendar/fullcalendar.print.min.css') }}" rel="stylesheet" media="print">
+    <script src="{{ asset('fullcalendar/lib/moment.min.js') }}"></script>
+    <script src="{{ asset('fullcalendar/fullcalendar.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,listWeek,agendaWeek,agendaDay'
+                },
+                defaultDate: '{{ date('Y-m-d') }}',
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                        @foreach($calendarEvents as $calendarEvent)
+                    {
+                        title: "{!! $calendarEvent->title  !!}",
+                        start: "{!! date(DATE_ISO8601, strtotime($calendarEvent->date->format('Y-m-d').$calendarEvent->start_time)) !!}",
+                        end: "{!! date(DATE_ISO8601, strtotime($calendarEvent->date->format('Y-m-d').$calendarEvent->end_time)) !!}"
+                    },
+                    @endforeach
+                ],
+                eventColor: '#373d42',
+                eventTextColor: '#f5f5f5'
+            });
+
+        });
+    </script>
+    <style>
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+@endsection
+
 @section('content')
 
     <!-- Events Grid -->
@@ -30,6 +71,13 @@
                 @endforeach
                 {{ $events->links('vendor.pagination.simple-bootstrap-4') }}
             </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-light" id="cal">
+        <div class="container">
+            <div id='calendar'></div>
         </div>
     </section>
 
