@@ -44,7 +44,7 @@
 @section('content')
 
     <!-- Events Grid -->
-    <section class="bg-dark" id="portfolio">
+    <section style="background-color: #272727;" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -66,6 +66,7 @@
                         <div class="portfolio-caption">
                             <h4>{{ $event->title }}</h4>
                             <p class="text-muted">{{ $event->date->toFormattedDateString() }}</p>
+                            <p>Time: {{ $event->start_time }} &mdash; {{ $event->end_time }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -82,7 +83,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="bg-dark">
+    <section id="about" style="background-color: #272727;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -160,7 +161,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" style="background-color: #272727;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">

@@ -15,7 +15,8 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    {{--<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>--}}
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link href="{{ asset('agency/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
@@ -33,7 +34,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Pour House</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><strong>Pour House</strong></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
@@ -70,7 +71,7 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Pour House</div>
+            {{--<div class="intro-lead-in">Pour House</div>--}}
             {{--<div class="intro-heading">It's Nice To Meet You</div>--}}
             {{--<a class="btn btn-xl js-scroll-trigger" href="#services">Tell Me More</a>--}}
         </div>
