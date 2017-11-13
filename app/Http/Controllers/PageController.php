@@ -6,6 +6,7 @@ use App\Mail\BookUs;
 use App\Mail\ContactUs;
 use App\MenuItem;
 use App\Type;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Event;
 use Illuminate\Support\Facades\Mail;
@@ -14,6 +15,10 @@ class PageController extends Controller
 {
     public function splash()
     {
+        Event::whereDate('date', '<', Carbon::now())
+            ->whereDate('date', '!=', date('Y-m-d').' 00:00:00')
+            ->delete();
+
         $events = Event::orderByRaw('ABS(DATEDIFF(events.date, NOW()))')->paginate(24);
         $menuItems = MenuItem::all();
         $types = Type::orderBy('id', 'asc')->get();
