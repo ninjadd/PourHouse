@@ -2,15 +2,15 @@
     @component('mail::panel')
         ## Hello there some one from {{ config('app.name') }} has contacted you.
 
-        Below is all the information they sent via the contact form.
+        ## Below is all the information they sent via the contact form.
 
-        Name: {{ $message->name }}
+        ## Name: {{ $message->name }}
 
-        Email: {{ $message->email }}
+        ## Email: {{ $message->email }}
 
-        Phone: {{ $message->phone }}
+        ## Phone: {{ $message->phone }}
 
-        Message: {{ $message->message }}
+        ## Message: {{ $message->message }}
 
         Thanks {{ config('app.name') }} Web Administrator
     @endcomponent
